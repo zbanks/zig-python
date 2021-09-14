@@ -7,7 +7,7 @@ pub fn build(b: *std.build.Builder) void {
     // between Debug, ReleaseSafe, ReleaseFast, and ReleaseSmall.
     const mode = b.standardReleaseOptions();
 
-    const lib = b.addSharedLibrary("pymodule", "src/example_mod.zig", .unversioned);
+    const lib = b.addSharedLibrary("pymodule", "src/example.zig", .unversioned);
     lib.setTarget(target);
     lib.linkSystemLibrary("c");
     // TODO: Build for multiple versions of Python
